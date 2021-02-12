@@ -140,11 +140,6 @@ const buildModal = title => ({
 });
 
 module.exports = {
-  buildInput,
-  buildSection,
-  buildAction,
-  buildHeader,
-  buildSubmit,
   buildBlock,
   buildModal,
   buildDivider,
