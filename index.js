@@ -56,7 +56,6 @@ const buildDivider = () => ({
 });
 
 const buildBlock = question => {
-  console.log(question);
   let main;
   switch (question.questionType) {
     case 'dropDownSingle':
@@ -114,7 +113,6 @@ const buildBlock = question => {
     default:
       break;
   }
-  console.log('main', main);
   if (main) {
     return main;
   }
