@@ -8,6 +8,17 @@ const buildSection = text => ({
   },
 });
 
+const buildButton = (text, value = 'clicked', action_id = 'button-action') => ({
+  type: 'button',
+  text: {
+    type: 'plain_text',
+    text,
+    emoji: true,
+  },
+  value,
+  action_id,
+});
+
 const buildAction = () => ({
   type: 'actions',
   block_id: 'dropdown1',
@@ -20,17 +31,6 @@ const buildHeader = text => ({
     type: 'plain_text',
     text,
   },
-});
-
-const buildSubmit = () => ({
-  type: 'button',
-  text: {
-    type: 'plain_text',
-    text: 'Submit',
-    emoji: true,
-  },
-  value: 'submit',
-  action_id: 'button-action',
 });
 
 const buildInput = (labelText, placeHolderText, multiline = false) => ({
@@ -140,7 +140,7 @@ const buildModal = title => ({
 module.exports = {
   buildAction,
   buildHeader,
-  buildSubmit,
+  buildButton,
   buildSection,
   buildBlock,
   buildModal,
